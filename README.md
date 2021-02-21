@@ -1,97 +1,94 @@
-# uLogin
+Donate link: http://ulogin.ru
+Tags: ulogin, login, social, authorization
+Tested up to: 2.1.0.1
+Stable tag: 2.0.4
+License: GNU General Public License, version 2
 
-Donate link: http://ulogin.ru  
-Tags: ulogin, login, social, authorization  
-Tested up to: 2.1.0.1  
-Stable tag: 2.0.4  
-License: GNU General Public License, version 2  
-
-**uLogin** — это инструмент, который позволяет пользователям получить единый доступ к различным Интернет-сервисам без необходимости повторной регистрации,
-а владельцам сайтов — получить дополнительный приток клиентов из социальных сетей и популярных порталов (Google, Яндекс, Mail.ru, ВКонтакте, Facebook и др.)
+** uLogin ** is a tool that allows users to get uniform access to various Internet services without the need to re-register,
+and for site owners - to receive an additional influx of customers from social networks and popular portals (Google, Yandex, Mail.ru, VKontakte, Facebook, etc.)
 
 
-## Установка
+## Installation
 
-- Распакуйте содержимое папки **upload** архива установки в корень сайта.  
-- Активируйте модули **"uLogin - панель"** и **"uLogin - общие настройки"** в списке модулей.
-- Модуль заработает сразу после активации с настройками по умолчанию.
+- Unpack the contents of the ** upload ** folder of the installation archive to the root of the site.
+- Activate the modules ** "uLogin - panel" ** and ** "uLogin - general settings" ** in the list of modules.
+- The module will work immediately after activation with the default settings.
 
-При активации(установке) модуля *"uLogin - панель"* автоматически создаются дочерние модули и добавляются в макет *Account*.
-При активации(установке) модуля *"uLogin - общие настройки"* создаётся группа клиентов *uLogin* для новых, регистрирующихся через uLogin клиентов.
+When activating (installing) the * "uLogin - panel" * module, child modules are automatically created and added to the * Account * layout.
+When activating (installing) the module * "uLogin - general settings" *, a group of clients * uLogin * is created for new clients who register through uLogin.
 
-Более детальную информацию смотрите на сайте https://ulogin.ru/help.php
+For more detailed information, see the website https://ulogin.ru/help.php
 
-## Модуль "uLogin - общие настройки"
+## Module "uLogin - general settings"
 
-В данном модуле задаются:  
-**Значение поля uLogin ID** общее поле для всех виджетов uLogin, необязательный параметр (см. *"Настройки виджета uLogin"*);  
-**Группа клиентов по умолчанию:** группа, присваиваемая пользователям, зарегистрированных с помощью uLogin. По умолчанию - группа *uLogin* - создаётся после установки модуля.  
-
-
-## Модуль "uLogin - панель"
-
-Здесь Вы можете указывать параметры для каждой панели uLogin отдельно.
-
-Параметр модуля **Значение поля uLogin ID** - задаёт значение для виджета данной панели. Пустое поле - значение берётся из модуля "uLogin - общие настройки".  
-Параметр **Тип формы** - влияет на отображение панели uLogin:  
-
-- *Форма offline - авторизация* - форма для авторизации, отображается, когда пользователь онлайн. Место расположения определяется в макетах.
-- *Форма online - синхронизация* - форма для связывания аккаунтов различных соцсетей, отображается, когда пользователь офлайн. Место расположения определяется в макетах.
-- *Форма online - синхронизация в личном кабинете пользователя* - то же, что и *Форма online - синхронизация*,
-за исключением того, что форма будет отображаться только в личном кабинете пользователя на странице редактирования данных только при добавлении модуля в макет *Account*.
-
-При активации(установке) модуля *"uLogin - панель"* автоматически создаются два дочерних модуля и добавляются в макет *Account*.
+This module sets:
+** Value of the uLogin ID field ** common field for all uLogin widgets, optional parameter (see * "Settings of uLogin widget" *);
+** Default customer group: ** group assigned to users registered with uLogin. By default, the * uLogin * group is created after the module is installed.
 
 
-## Настройки виджета uLogin
+## Module "uLogin - panel"
 
-При установке расширения uLogin авторизация пользователей будет осуществляться с настройками по умолчанию.  
-Для более детальной настройки виджетов uLogin Вы можете воспользоваться сервисом uLogin.  
+Here you can specify parameters for each uLogin panel separately.
 
-Вы можете создать свой виджет uLogin и редактировать его самостоятельно:
+Module parameter ** Field value uLogin ID ** - sets the value for the widget of this panel. Empty field - the value is taken from the "uLogin - general settings" module.
+The parameter ** Form type ** - affects the display of the uLogin panel:
 
-для создания виджета необходимо зайти в Личный Кабинет (ЛК) на сайте http://ulogin.ru/lk.php,
-добавить свой сайт к списку Мои сайты и на вкладке Виджеты добавить новый виджет. После этого вы можете отредактировать свой виджет.
+- * Form offline - authorization * - form for authorization, displayed when the user is online. The location is determined in layouts.
+- * Online form - synchronization * - a form for linking accounts of various social networks, displayed when the user is offline. The location is determined in layouts.
+- * Online form - synchronization in the user's personal account * - the same as * Online form - synchronization *,
+except that the form will be displayed only in the user's personal account on the data editing page only when the module is added to the * Account * layout.
 
-**Важно!** Для успешной работы плагина необходимо включить в обязательных полях профиля поле **Еmail** в Личном кабинете uLogin.  
-Заполнять поля в графе "Тип авторизации" не нужно, т.к. расширение uLogin настроено на автоматическое заполнение данных параметров.
-
-Созданный в Личном Кабинете виджет имеет параметр **uLogin ID**.  
-Скопируйте значение **uLogin ID** вашего виджета в соответствующее поле в настройках плагина на вашем сайте и сохраните настройки.   
-
-Если всё было сделано правильно, виджет изменится согласно вашим настройкам.
+When activating (installing) the * "uLogin - panel" * module, two child modules are automatically created and added to the * Account * layout.
 
 
-## Особенности
+## uLogin widget settings
 
-Для ручного вывода панели авторизации в любом месте шаблона темы OpenCart необходимо следать следующее:
+When installing the uLogin extension, users will be authorized with the default settings.
+For more detailed customization of uLogin widgets, you can use the uLogin service.
 
-- Добавить контроллёр модуля в php файл шаблона, например, для вывода панели в хэдере, необходимо добавить этот код в файл `catalog/controller/common/header.php`:
+You can create your own uLogin widget and edit it yourself:
 
-        $data['ulogin_form_marker'] = $this->load->controller('module/ulogin');    
-    Обратите внимание: добавить код нужно в начало метода index соответствующего контроллера.
+to create a widget, you need to go to your Personal Account (LC) on the website http://ulogin.ru/lk.php,
+add your site to the list of My sites and add a new widget on the Widgets tab. After that, you can edit your widget.
+
+** Important! ** For the plugin to work successfully, you must enable the ** Email ** field in your uLogin Personal Account in the required profile fields.
+You do not need to fill in the fields in the "Authorization type" column. the uLogin extension is configured to automatically fill in these parameters.
+
+The widget created in the Personal Account has the ** uLogin ID ** parameter.
+Copy the ** uLogin ID ** value of your widget to the corresponding field in the plugin settings on your site and save the settings.
+
+If everything was done correctly, the widget will change according to your settings.
 
 
-- Добавить вывод панели в шаблоне `catalog/view/theme/default/template/common/header.tpl`, например после строки `<div class="collapse navbar-collapse navbar-ex1-collapse">`:
+## Features
 
-        <?php echo $ulogin_form_marker;?>
+To manually display the login panel anywhere in the OpenCart theme template, you need to do the following:
 
-Панель синхронизации в личном кабинете пользователя и панель авториации на страницах входа и регистрации настраивается в **модулях uLogin - панель > account_lk_online** и **uLogin - панель > account_offline**.
+- Add the module controller to the template php file, for example, to display the panel in the header, you need to add this code to the `catalog / controller / common / header.php` file:
 
-## Изменения
+        $ data ['ulogin_form_marker'] = $ this-> load-> controller ('module / ulogin');
+    Note that you need to add the code to the beginning of the index method of the corresponding controller.
 
-####2.0.4
-* Исправление ошибок
 
-####2.0.3
-* Исправление ошибок
+- Add panel output in the template `catalog / view / theme / default / template / common / header.tpl`, for example, after the line` <div class = "collapse navbar-collapse navbar-ex1-collapse"> `:
 
-####2.0.2
-* Добавлена совместимость с версией движка 2.1.0.1
+        <? php echo $ ulogin_form_marker;?>
 
-####2.0.1
-* Исправлен баг с выводом панели uLogin с использованием протокола https.
-* Исправлен README.md.
+The synchronization panel in the user's personal account and the authorization panel on the login and registration pages are configured in the ** uLogin modules - panel> account_lk_online ** and ** uLogin - panel> account_offline **.
 
-####2.0.0
-* Релиз.
+## Changes
+
+#### 2.0.4
+* Error correction
+
+#### 2.0.3
+* Error correction
+
+#### 2.0.2
+* Added compatibility with engine version 2.1.0.1
+
+#### 2.0.1
+* Fixed bug with displaying the uLogin panel using the https protocol.
+* Fixed README.md.
+
+#### 2.0.0 Release.
